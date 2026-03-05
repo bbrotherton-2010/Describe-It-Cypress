@@ -23,3 +23,24 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('checkAccessibility', () => {
+  cy.injectAxe()
+  cy.checkA11y(null, null, logA11yViolations)
+})
+
+function logA11yViolations(violations) {
+  if (violations.length) {
+    console.log(`Accessibility violations: ${violations.length}`)
+
+    violations.forEach((violation) => {
+      console.log(`\nRule: ${violation.description}`)
+      console.log(`Severity: ${violation.impact}`)
+      console.log(`Affected elements: ${violation.nodes.length}`)
+
+      violation.nodes.forEach((node) => {
+        console.log(`  Element: ${node.target}`)
+      })
+    })
+  }
+}
