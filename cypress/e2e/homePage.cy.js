@@ -1,6 +1,6 @@
 const HomePage = require('../pages/HomePage')
 
-describe('Homepage', () => {
+describe('Homepage - not exhaustive', () => {
   const homePage = new HomePage();
 
   it('Navigates back to homepage', () => {

@@ -1,4 +1,4 @@
-describe('Cart Functionality', () => {
+describe('Cart Functionality - not exhaustive', () => {
 
     it('can add items to cart', () => {
         // Navigate to product page
