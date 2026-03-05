@@ -47,6 +47,6 @@ describe('Cart Functionality - not exhaustive', () => {
         // Use ally plugin to verify accessibility
     })
 
-
-
 })
+
+// If possible, do visual testing on whole page to ensure that no unexpected UI changes occurred

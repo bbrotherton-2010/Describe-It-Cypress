@@ -55,5 +55,4 @@ describe('Homepage - not exhaustive', () => {
 
 })
 
-// Ensure the social links have the correct URLs
 // If possible, do visual testing on whole page to ensure that no unexpected UI changes occurred
